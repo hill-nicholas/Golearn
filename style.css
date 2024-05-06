@@ -1,0 +1,623 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: radikal ;
+    src: url('./fonts/Radikal/Nootype\ -\ Radikal\ Bold.otf');
+}
+@font-face {
+    font-family: radikal-light;
+    src: url('./fonts/Radikal/Nootype\ -\ Radikal\ Light.otf');
+}
+@font-face {
+    font-family: radikal-medium ;
+    src: url('./fonts/Radikal/Nootype\ -\ Radikal\ Medium.otf');
+}
+@font-face {
+    font-family: radikal-thin;
+    src: url('./fonts/Radikal/Nootype\ -\ Radikal\ Thin.otf');
+}
+@font-face {
+    font-family: radikal-ultra-thin;
+    src: url('./fonts/Radikal/Nootype\ -\ Radikal\ UltraThin.otf');
+}
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+body{
+    width: 100vw;
+    background-color: rgb(237, 246, 248);
+    font-family: radikal-medium;
+    overflow-x: hidden;
+    position: relative;
+    overflow-x: hidden;
+    width: 100vw;
+}
+.upperHeader{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0px;
+    animation: fade-up 1s;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fade-up 1s;
+}
+
+.typeSwitch{
+    width: 30%;
+    background-color: rgb(220, 217, 223);
+    font-family: radikal-medium ;
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 20px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    color: rgb(24, 1, 46);
+}
+.typeSwitch button{
+    outline: none;
+    border: none;
+    background-color: #18012e;
+    color: white;
+    font-size: 20px;
+    font-family: radikal-medium ;
+    padding: 10px 30px;
+    border-radius: 30px;
+    word-spacing: 8px;
+}
+.lowerHeader{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(237, 246, 248);
+}
+.lowerHeader .logo{
+    font-size: 15px;
+}
+.lowerHeader .contacts{
+    font-family: radikal-medium ;
+    display: flex;
+    gap: 40px;
+}
+.lowerHeader .contacts button{
+    border: 3px solid rgb(24, 1, 46);
+    outline: none;
+    font-size: 13px;
+    padding: 20px;
+    border-radius: 40px;
+    font-family: radikal-medium;
+}
+.contacts{
+    display: none;
+    display: flex;
+    align-items: center;
+}
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 150px;
+    animation: fade-up 1s;
+}
+main h1{
+    text-align: center;
+    color: rgb(24, 1, 46);
+    font-size: 40px;
+    font-family: radikal;
+}
+main p{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 30px;
+    line-height: 30px;
+    color: rgb(74, 8, 136);
+    font-family: radikal-medium
+}
+main h1 span {
+    color: orangered;
+}
+.slidePackage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    animation: fade-up 1s;
+}
+.slideHeader{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.slideHeader h1,.slideHeader p{
+    width: 50%;
+}
+.slideHeader h1{
+    font-weight: 100;
+}
+
+.mainHeader{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-up 1s;
+}
+.subMainHeader{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subMainHeader img{
+    width: 90%;
+}
+.items h3{
+    color: red;
+}
+.slider{
+    width: 800px;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    /* background-color: green; */
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.slider .list .inneritems{
+    width: 800px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    gap: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 12px gainsboro;
+}
+.inneritems p{
+    padding: 0;
+}
+.inneritems img{
+    width: 90%;
+    border-radius: 20px;
+}
+.slider .buttons{
+    position: absolute;
+    top:45%;
+    left: 5%;
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider .buttons button{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: rgb(24, 1, 46);
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.slider .dots{
+    position: absolute;
+    bottom: 0px;
+    left:0;
+    color: #fff;
+    width:100%;
+    /* margin: 0;
+    padding: 0; */
+    display: flex;
+    justify-content: center;
+}
+
+.slider .dots li{
+    list-style-type: none;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(24, 1, 46);
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.slider .dots li.active{
+    width:30px;
+}
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    animation: fade-up 1s;
+}
+section h1{
+    font-size: 45px;
+    color: rgb(24, 1, 46);
+}
+section p{
+    color: rgb(74, 8, 136);
+    width: 40%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+    padding-top: 20px;
+}
+.cards{
+    display: flex;
+    width: 70%;
+    margin-top: 60px;
+    justify-content: space-between;
+}
+.card{
+    width: 30%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    gap: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 12px gainsboro;
+    animation: fade-up 1s;
+}
+.card p{
+    font-size: 15px;
+    color: gray;
+    width: 85%;
+    text-align: center;
+    line-height: 20px;
+    padding-top: 0px;
+    text-align: left;
+    font-family: radikal-medium;
+
+}
+.card h4{
+    text-align: left;
+    width: 85%;
+    text-align: left;
+}
+.card img{
+    width: 85%;
+    border-radius: 20px;
+}
+aside{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    animation: fade-up 1s;
+}
+aside h1{
+    font-size: 50px;
+    width: 50%;
+    text-align: center;
+    margin: 100px 0px;
+}
+.commentCards{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.commentcard {
+    width: 21%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 10px 0px;
+    gap: 15px;
+    box-shadow: 10px 10px 10px gainsboro;
+    animation: fade-up 1s;
+}
+.commentcard p{
+    width: 90%;
+    color: gray;
+}
+.commentcard h4{
+    width: 90%;
+    text-align: left;
+}
+.commentcard img{
+    width: 90%;
+    padding: 0;
+    margin: 0;
+}
+.statsContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.innerstats{
+    background-color: slateblue;
+    color: white;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0px;
+    border-radius: 20px;
+    margin: 150px 0px 100px 0px;
+    animation: fade-up 1s;
+}
+.innerstats h1{
+    font-size: 50px;
+    width: 70%;
+    text-align: center;
+
+}
+.stats{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 50px 0px;
+}
+footer p{
+    font-family: radikal-thin;
+}
+footer hr{
+    width: 70%;
+    margin: 50px 0px;
+}
+.mainfooter{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.mainfooter .desc,.company,.socials,.memberships,.certifications{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fade-up 1s;
+}
+.mainfooter .memberships,.certifications,.company,.socials{
+    align-items: center;
+    /* justify-content: center; */
+}
+.mainfooter img{
+    width: 40%;
+}
+.lowerfooter{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    animation: fade-up 1s;
+}
+.lowerfooter .socialIcons{
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+.lowerfooter .readabout{
+    display: flex;
+    gap: 20px;
+}
+@media screen and (max-width: 950px){
+    .typeSwitch{
+        width: 70%;
+    }
+    .contacts{
+        display: none;
+    }
+}
+@media screen and (max-width: 600px){
+
+    .typeSwitch{
+        width: 70%;
+        font-size: 10px;
+    }
+    .typeSwitch button{
+        font-size: 10px;
+    }
+    #contactButton{
+        display: none;
+    }
+    .mainHeader{
+        flex-direction: column-reverse;
+
+    }
+    .subMainHeader{
+        width: 90%;
+    }
+    .lowerHeader .logo{
+        font-size: 10px;
+    }
+    main{
+        padding-top: 10px;
+    }
+    main h1{
+        font-size: 20px;
+    }
+    main p{
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .slidePackage{
+        padding-top: 50px;
+    }
+    .slideHeader h1,.slideHeader p{
+        width: 90%;
+    }
+    .slideHeader p{
+        color: gray;
+    }
+    .mainHeader{
+        width: 90%;
+    }
+    .slider{
+        width: 400px;
+    }
+    .slider .list .inneritems{
+        width: 400px;
+    }
+    .slider .dots{
+        width: 100%
+    }
+    .slider .buttons{
+        width: 90%;
+    }
+    section{
+        margin-top: 50px;
+    }
+    section h1{
+        font-size: 20px;
+    }
+    section p{
+        width: 90%;
+        color: gray;
+        font-family: radikal-thin;
+    }
+    .cards{
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+    }
+    .card{
+        width: 100%;
+    }
+
+    .innerstats{
+        width: 100%;
+        border-radius: 0px;
+        margin: 50px 0px 20px 0px;
+    }
+
+    .innerstats h1{
+        width: 60%;
+        font-size: 30px;
+        text-align: left;
+        align-self: left;
+    }
+    aside h1{
+        font-size: 25px;
+        width: 80%;
+    }
+    .commentCards{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .commentcard{
+        width: 100%;
+    }
+
+    .mainfooter{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+    .mainfooter .desc,.company,.socials,.memberships,.certifications{
+        justify-content: center;
+        width: 80%;
+    }
+    .desc{
+        align-items: center;
+    }
+    footer hr{
+        display: none;
+    }
+    .lowerfooter{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .socialIcons,.readabout{
+        align-items: center;
+        justify-content: center;
+    }
+    .readabout{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:768px){
+    .slider{
+        height: 400px;
+    }
+}
