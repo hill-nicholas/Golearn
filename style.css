@@ -83,16 +83,18 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 .main h1{
     width: 90%;
-    font-size: 3rem
+    font-size: 3rem;
 }
 .main p{
     font-size: 1.1rem;
 }
+
 main h1 span {
-    color: rgb(17, 171, 218);
+    color: #069df4;
 }
 .main img{
     width: 90%;
@@ -154,9 +156,14 @@ section{
     color: gray;
     width: 90%;
 }
+.stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .stats{
     margin-top: 5em;
-    background-color: rgb(17, 171, 218);
+    background-color: #069df4;
     color: white;
     width: 55%;
     display: flex;
@@ -207,7 +214,7 @@ section{
     margin-top: 3rem;
 }
 .subjectDiv h1{
-    color: rgb(17, 171, 218);
+    color: #069df4;
     text-align: center;
     font-family: radikal;
 }
@@ -224,7 +231,7 @@ section{
 .subjectCard img{
     width: 32%;
     border-radius: 1rem;
-    border: 2px solid rgb(17, 171, 218) ;
+    border: 2px solid #069df4 ;
 }
 .commentDiv{
     width: 90%;
@@ -316,6 +323,8 @@ footer{
     main{
         flex-direction: column;
         margin-top: 7rem;
+        align-items: center;
+        justify-content: center;
     }
     .main{
         width: 90%;
@@ -508,6 +517,8 @@ footer{
     main{
         flex-direction: column;
         margin-top: 4.5rem;
+        align-items: center;
+        justify-content: center;
     }
     .main{
         width: 90%;
@@ -534,6 +545,7 @@ footer{
     .main img{
         width: 100%;
         margin-top: 2rem;
+        align-self: center;
     }
     section{
         justify-content: center;
