@@ -48,17 +48,17 @@
     </section>
     <div class="stats reveal">
         <h1>The revolutionary app everyone is talking about</h1>
-        <div class="statsBody">
-            <div class="stat">
-                <h1>100+</h1>
+        <div class="statsBody counters">
+            <div class="stat counter">
+                <h1><span data-count="100">0</span>+</h1>
                 <h5>Learners</h5>
             </div>
-            <div class="stat">
-                <h1>50+</h1>
+            <div class="stat counter">
+                <h1><span data-count="50">0</span>+</h1>
                 <h5>Trusted Parents</h5>
             </div>
-            <div class="stat">
-                <h1>2+</h1>
+            <div class="stat counter">
+                <h1><span data-count="2">0</span>+</h1>
                 <h5>Cities</h5>
             </div>
         </div>
@@ -164,6 +164,42 @@
        </div>
     </footer>
     <script type="text/javascript">
+        const counters = document.querySelectorAll(".counters span");
+        const container = document.querySelector(".counters");
+        let activated = false;
+        window.addEventListener("scroll",() => {
+        if(
+            pageXOffset > container.offsetTop - container.offsetHeight - 200
+            && activated === false
+        ){
+            counters.forEach(counter => {
+                counter.innerText = 0;
+                let count = 0;
+
+                function updateCount(){
+                    const target = parseInt(counter.dataset.count);
+                    if(count < target){
+                        count++;
+                        counter.innerText = count;
+                        setTimeout(updateCount,100);
+                    }else{
+                        counter.innerText = target;
+                    }
+                }
+                updateCount();
+                activated = true;
+            })
+        } else if(
+            pageYOffset < container.offsetTop - container.offsetHeight -500
+            || pageYOffset === 0
+            && activated === true 
+        ){
+            counters.forEach(counter =>{
+                counter.innerText = 0
+            });
+            activated = false;
+        }
+        })
         window.addEventListener('scroll',reveal);
 
         function reveal(){
